@@ -1,0 +1,22 @@
+{
+  "name": "channel-adapter",
+  "version": "0.0.1",
+  "description": "A Channel Adapter - a bridge between SNS snd EventHandlers",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib",
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+git@github.com:vklymniuk/channel-adapter.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "Smart House"
+  ],
+  "author": "Vladimir Klymniuk",
+  "license": "MIT-advertising"
+}
