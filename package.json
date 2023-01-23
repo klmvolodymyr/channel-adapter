@@ -12,11 +12,43 @@
     "url": "git+git@github.com:vklymniuk/channel-adapter.git"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "nyc mocha --reporter spec test/unit_tests",
+    "integration-tests": "nyc mocha --reporter spec test/integration_tests",
+    "report-coverage": "nyc report --reporter=text-lcov > coverage.lcov && codecov",
+    "ci-publish": "ci-publish",
+    "start": "node index.js"
   },
   "keywords": [
     "Smart House"
   ],
   "author": "Vladimir Klymniuk",
-  "license": "MIT-advertising"
+  "license": "MIT-advertising",
+  "dependencies": {
+    "aws-sdk": "^2.1300.0",
+    "co": "^4.6.0",
+    "http-status-codes": "^2.2.0",
+    "koa": "^2.14.1",
+    "koa-bodyparser": "^4.3.0",
+    "koa-router": "^12.0.0",
+    "lodash": "^4.17.21",
+    "nconf": "^0.12.0",
+    "request": "^2.88.2",
+    "request-promise": "^4.2.6",
+    "sns-validator": "^0.3.5",
+    "winston": "^3.8.2"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-flow": "^6.23.0",
+    "chai": "^4.3.7",
+    "chai-as-promised": "^7.1.1",
+    "ci-publish": "^1.3.1",
+    "eslint-plugin-chai-expect": "^3.0.0",
+    "eslint-plugin-promise": "^6.1.1",
+    "faker": "^6.6.6",
+    "mocha": "^10.2.0",
+    "nyc": "^15.1.0",
+    "sinon": "^15.0.1",
+    "sinon-chai": "^3.7.0"
+  }
 }

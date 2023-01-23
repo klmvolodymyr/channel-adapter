@@ -1,0 +1,11 @@
+{
+    "Type": "Notification",
+    "MessageId": "2b87adb3-4dce-55f0-b83f-f8b3059ec6e7",
+    "TopicArn": "arn:aws:sns:us-east-1:7777:channel-adapter-test-topic",
+    "Message": "{\"hello\":\"vovan\"}",
+    "Timestamp": "2019-03-11T11:27:12.409Z",
+    "SignatureVersion": "1",
+    "Signature": "rsa-signatureXXX===",
+    "SigningCertURL": "https://sns.us-east-1.amazonaws.com/SimpleNotificationService-666.pem",
+    "UnsubscribeURL": "https://sns.us-east-1.amazonaws.com/?Action=Unsubscribe&SubscriptionArn=arn:aws:sns:us-east-1:7777:channel-adapter-test-topic:f8f7ee30-64fd-48a4-ae80-eddb86f7de55"
+}

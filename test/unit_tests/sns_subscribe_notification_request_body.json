@@ -1,0 +1,12 @@
+{
+    "Type": "SubscriptionConfirmation",
+    "MessageId": "bb9285b6-2b71-4618-ae50-aea6b21c688c",
+    "Token": "65656b687f5d51e6e241dbca52ec0845dd7adb7960c01f3e06405e92f6840e5383b8835adaad87c91b137c8a289b06fff482152aef04cd56aaad0c99653a4cfeff1e94f21d42968aa0924b1c15eac00bf1eb726c2b25914dcdc07ab554a2738f22c810b31d4b4408f5ed4b8d3a2ad97655187977b91c3f2982249ff51f",
+    "TopicArn": "arn:aws:sns:us-east-1:777:channel-adapter-test-topic",
+    "Message": "You have chosen to subscribe to the topic arn:aws:sns:us-east-1:777:channel-adapter-test-topic.\nTo confirm the subscription, visit the SubscribeURL included in this message.",
+    "SubscribeURL": "https://sns.us-east-1.amazonaws.com/?Action=ConfirmSubscription&TopicArn=arn:aws:sns:us-east-1:7777:channel-adapter-test-topic&Token=2336412f37fb687f5d51e6e241dbca52ec0845dd7adb7960c01f3e06405e92f6840e5383b8835adaad87c91b137c8a289b06fff482152aef04cd56aaad0c99653a4cfeff1e94f21d42968aa0924b1c15eac00bf1eb726c2b25914dcdc07ab554a2738f22c810b31d4b4408f5ed4b8d3a2ad97655187977b91c3f2982249ff51f",
+    "Timestamp": "2019-03-10T15:14:51.822Z",
+    "SignatureVersion": "1",
+    "Signature": "rsa-key==",
+    "SigningCertURL": "https://sns.us-east-1.amazonaws.com/SimpleNotificationService-6aad65c2f9911b05cd53efda11f913f9.pem"
+}

@@ -1,0 +1,11 @@
+{
+    "Type": "Notification",
+    "MessageId": "7788",
+    "TopicArn": "arn:aws:sns:us-east-1:7777:channel-adapter-test-topic",
+    "Message": "{\"hello\":\"world\"}",
+    "Timestamp": "2019-03-11T11:27:12.409Z",
+    "SignatureVersion": "1",
+    "Signature": "a.b.c.==",
+    "SigningCertURL": "https://sns.us-east-1.amazonaws.com/SimpleNotificationService-999.pem",
+    "UnsubscribeURL": "https://sns.us-east-1.amazonaws.com/?Action=Unsubscribe&SubscriptionArn=arn:aws:sns:us-east-1:771585994482:channel-adapter-test-topic:888"
+}
