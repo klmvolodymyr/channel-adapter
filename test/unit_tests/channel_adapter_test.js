@@ -12,7 +12,6 @@ describe('Channel Adapter tests ->', function() {
     const mockAccountId = 123456789;
     const environment = 'test';
 
-
     beforeEach(() => {
         channelAdapter = new ChannelAdapter(mockAccountId, mockRegion, environment);
     });
@@ -20,7 +19,7 @@ describe('Channel Adapter tests ->', function() {
     it('_publishToSns expects to call publish to SNS function with an SNS message', async () => {
         channelAdapter._SNS.publish = sinon.stub().returns({ promise: sinon.stub().resolves()});
         let mockTopicArn = 'mockTopicArn';
-        let mockMessage = { hello: "world"};
+        let mockMessage = { hello: "world" };
         await channelAdapter._publishToSns(mockMessage, mockTopicArn);
         expect(channelAdapter._SNS.publish.calledOnce).to.be.true;
         expect(channelAdapter._SNS.publish.calledWith( {

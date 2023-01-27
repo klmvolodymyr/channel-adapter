@@ -1,5 +1,4 @@
 'use strict'
-
 require('./bootstrap_init.js');
 const _ = require('lodash');
 const expect = global.expect;
@@ -15,7 +14,6 @@ describe('Channel Adapter Integrations publish tests ->', function() {
     this.timeout(60000);
     let channelAdapter;
     let topicARN;
-
 
     before(async () => {
         topicARN = await setUpSns();

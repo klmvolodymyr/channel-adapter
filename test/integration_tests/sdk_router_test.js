@@ -13,7 +13,8 @@ describe('SDK Router tests', () => {
         channelAdapterRunner._channelAdapter._publishToSns = sinon.stub();
         let mockBody = {
             hello: 'world'
-        }
+        };
+
         let options = {
             method: 'POST',
             uri: `http://localhost:32000/v1/event/`,
@@ -26,5 +27,4 @@ describe('SDK Router tests', () => {
         expect(channelAdapterRunner._channelAdapter._publishToSns.calledOnce).to.be.true;
         expect(channelAdapterRunner._channelAdapter._publishToSns.calledWith(mockBody)).to.be.true;
     });
-
 });

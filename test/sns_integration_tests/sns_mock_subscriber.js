@@ -3,7 +3,7 @@
 // Which can not be exposed via CodeFresh
 // The only way to use these test are with Port Forwarding port 56432 in the Office's router to your local host
 const OFFICE_IP = '66.222.44.99';
-const OFFICE_PORT = '56432'
+const OFFICE_PORT = '56432';
 const koa = require('koa');
 const bodyParser = require('koa-bodyparser');
 const WEB_SERVER_PORT = 56432;
@@ -52,10 +52,10 @@ class SnsMockSubscriber {
                 switch (requestBody.Type) {
                     case ('SubscriptionConfirmation'):
                         await this._confirmSubscription(requestBody);
-                        break;
+                    break;
                     case ('Notification'):
                         await this._handleNotification(requestBody);
-                        break;
+                    break;
                     default:
                         log.warn(`Unsupported SNS message type: ${requestBody.Type}`)
                 }
