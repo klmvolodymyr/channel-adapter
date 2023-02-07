@@ -20,7 +20,7 @@ describe('SDK Router tests', () => {
             uri: `http://localhost:32000/v1/event/`,
             body: mockBody,
             json: true,
-            simple: true
+            simple: true,
         };
 
         await request(options);

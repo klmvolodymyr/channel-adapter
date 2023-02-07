@@ -29,7 +29,7 @@ describe('Channel Adapter Integrations publish tests ->', function() {
 
     it('publishToSNS expects to successfully publish a message to SNS', async () => {
         let result = await channelAdapter.publishToSns({
-            hello: 'world'
+            hello: 'world',
         });
         expect(result.MessageId).to.be.not.undefined;
     });
@@ -69,7 +69,7 @@ describe('Channel Adapter Integrations subscribe tests with mock subscriber', fu
         await Bluebird.delay(5000);
         expect(mockSubscriber._confirmSubscription.called).to.be.true;
         let mockMessageJSON = {
-            hello: 'world'
+            hello: 'world',
         };
         await channelAdapter.publishToSns(mockMessageJSON);
         await Bluebird.delay(5000);
@@ -85,7 +85,7 @@ describe('Channel Adapter with runner tests and SNS', function() {
     // Unfortunately, integration tests with SNS are only applicable with an exposed HTTP endpoint
     // Which can not be exposed via CodeFresh
     // The only way to use these test are with Port Forwarding port 56432 in the Office's router to your local host
-    const OFFICE_IP = '62.219.214.242';
+    const OFFICE_IP = '1.2.3.4';
     const OFFICE_PORT = '56432'
 
     this.timeout(60000);
@@ -111,8 +111,9 @@ describe('Channel Adapter with runner tests and SNS', function() {
         await SNS.subscribe({
             Protocol: 'http',
             Endpoint: `http://${OFFICE_IP}:${OFFICE_PORT}/v1/sns/`,
-            TopicArn: topicARN
+            TopicArn: topicARN,
         }).promise();
+
         await Bluebird.delay(5000);
         expect(channelAdapterRunner._channelAdapter._confirmSnsSubscription.called).to.be.true;
 
@@ -121,13 +122,14 @@ describe('Channel Adapter with runner tests and SNS', function() {
     it('Channel Adapter expects to be called on _handleSnsNotification upon receiving an SNS Notification', async () => {
         channelAdapterRunner._channelAdapter._handleSnsNotification = sinon.stub();
         let mockMessage = {
-            hello: 'world'
+            hello: 'world',
         }
         await SNS.subscribe({
             Protocol: 'http',
             Endpoint: `http://${OFFICE_IP}:${OFFICE_PORT}/v1/sns/`,
-            TopicArn: topicARN
+            TopicArn: topicARN,
         }).promise();
+
         await Bluebird.delay(5000);
         await SNS.publish({
             Message: JSON.stringify(mockMessage),

@@ -39,7 +39,7 @@ class SnsMockSubscriber {
         return SNS.subscribe({
             Protocol: 'http',
             Endpoint: `http://${OFFICE_IP}:${OFFICE_PORT}/v1/`,
-            TopicArn: topicArn
+            TopicArn: topicArn,
         }).promise();
     }
 

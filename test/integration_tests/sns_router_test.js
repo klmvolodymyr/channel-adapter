@@ -25,7 +25,7 @@ describe('SNS Router tests', function() {
             simple: true,
             headers: {
                 'content-type': 'text/plain; charset=UTF-8'
-            }
+            },
         };
         await request(options);
         expect(channelAdapterRunner._channelAdapter._confirmSnsSubscription.called).to.be.true;
@@ -43,7 +43,7 @@ describe('SNS Router tests', function() {
             simple: true,
             headers: {
                 'content-type': 'text/plain; charset=UTF-8'
-            }
+            },
         };
         await request(options);
         expect(channelAdapterRunner._channelAdapter._handleSnsNotification.calledOnce).to.be.true;
