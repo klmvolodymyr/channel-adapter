@@ -1,4 +1,3 @@
-
 # Channel Adapter  
   
 A Channel Adapter is a "bridge" between the system's Message Broker (SNS) and the applications subscribed to it (EventHandler via iPubSub).  
